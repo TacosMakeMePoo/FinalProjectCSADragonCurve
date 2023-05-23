@@ -6,7 +6,7 @@ class LineExample(Scene):
 
         #All the lines in a group
         lines = VGroup()
-        num_iterations = 15
+        num_iterations = 8
         first_line = Line(start=[-1, 0, 0], end=[1, 0, 0])
         lines.add(first_line)
 
@@ -14,7 +14,7 @@ class LineExample(Scene):
 
             #Declare a new VGroup, set it equal to the previous line
             temp = VGroup()
-            temp = lines
+            temp = lines.copy()
 
             for line in temp:
                 line.rotate(PI / 2)
